@@ -3,9 +3,9 @@ title: "Module 2 - R Markdown Document 1"
 author: "José Ulises Jiménez S."
 date: "07/10/2020"
 output:
-  pdf_document: default
   word_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -34,7 +34,6 @@ Here are some example R commands:
 2+2
 mean(c(1,2,3,4,5))
 ```
-
 
 Here is an example of a non-numbered list:
 
@@ -85,7 +84,6 @@ Here is an example of a nested blockquote:
 >
 > > This text is nested
 
-
 Here is an example of code in a blockquote:
 
 >     2+2
@@ -108,3 +106,18 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r pressure2, echo=TRUE, fig.height=4, fig.width=4}
+plot(pressure)
+```
+
+## Insert Tables
+
+```{r}
+knitr::kable(head(cars), caption = "Top 6 Rows of Cars Dataset")
+```
+
+## Insert an equation
+
+$$ Y = \beta_0 + \beta_1x $$
+
